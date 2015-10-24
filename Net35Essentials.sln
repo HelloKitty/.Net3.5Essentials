@@ -5,6 +5,19 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net35Essentials", "src\Net35Essentials\Net35Essentials.csproj", "{BC183CB1-63BE-4333-9BBC-117C2F8D4A21}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{32F35E97-C91E-4E11-A54E-540E67AB03B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{DE06498C-BBE4-4BD8-8707-E7C00829A458}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net35Essentials.Tests", "tests\Net35Essentials.Tests\Net35Essentials.Tests.csproj", "{AD6A4F0B-9A94-4C17-96C0-EDA93F869A67}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{7D1A3636-0D88-41E1-A37A-41B9700F714A}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +28,16 @@ Global
 		{BC183CB1-63BE-4333-9BBC-117C2F8D4A21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC183CB1-63BE-4333-9BBC-117C2F8D4A21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC183CB1-63BE-4333-9BBC-117C2F8D4A21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD6A4F0B-9A94-4C17-96C0-EDA93F869A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD6A4F0B-9A94-4C17-96C0-EDA93F869A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD6A4F0B-9A94-4C17-96C0-EDA93F869A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD6A4F0B-9A94-4C17-96C0-EDA93F869A67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BC183CB1-63BE-4333-9BBC-117C2F8D4A21} = {DE06498C-BBE4-4BD8-8707-E7C00829A458}
+		{AD6A4F0B-9A94-4C17-96C0-EDA93F869A67} = {32F35E97-C91E-4E11-A54E-540E67AB03B7}
 	EndGlobalSection
 EndGlobal

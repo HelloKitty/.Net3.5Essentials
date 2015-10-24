@@ -6,7 +6,7 @@ using System.Text;
 //No namespace to be accessible anywhere.
 
 
-public static class EnumExt
+public static class EnumExtensions
 {
 	//.Net 3.5 version of the .Net 4.0 HasFlag http://stackoverflow.com/questions/4108828/generic-extension-method-to-see-if-an-enum-contains-a-flag
 	/// <summary>
@@ -33,7 +33,5 @@ public static class EnumExt
 
 		ulong num = Convert.ToUInt64(value);
 		return ((Convert.ToUInt64(variable) & num) == num);
-
 	}
-
 }
