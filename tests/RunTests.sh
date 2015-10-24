@@ -1,1 +1,1 @@
-nunit-console -framework=3.5 ./Net35Essentials.Tests/bin/Debug/Net35Essentials.Tests.dll
+nunit-console -framework=3.5 ./Net35Essentials.Tests/Net35Essentials.Tests.csproj
