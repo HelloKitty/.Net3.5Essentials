@@ -10,6 +10,6 @@
     5. Compiles with Unity3D
     
 ###Build:
-  Linux/Mono: 
+  Linux/Mono: [![Build Status](https://travis-ci.org/HelloKitty/.Net3.5Essentials.svg?branch=master)](https://travis-ci.org/HelloKitty/.Net3.5Essentials)
   
   Windows: Tested locally
