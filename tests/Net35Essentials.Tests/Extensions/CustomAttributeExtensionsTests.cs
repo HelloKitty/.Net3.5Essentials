@@ -7,33 +7,35 @@ using System.Text;
 
 namespace Net35Essentials.Tests
 {
+	[Serializable] //won't be inherited
+	[AttributeUsage(AttributeTargets.Class)] //will be inherited
+	public class TestClass : Attribute //only an attribute so we can use attributeusgae for testing
+	{
+
+	}
+
+	public class TestClassInherited : TestClass
+	{
+
+	}
+
+	[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
+	public class MultipleUseTestAttribute : Attribute
+	{
+
+	}
+
+	[MultipleUseTestAttribute]
+	[MultipleUseTestAttribute]
+	public class MultipleAttributeTestClass
+	{
+
+	}
+
+
 	[TestFixture]
 	public static class CustomAttributeExtensionsTests
 	{
-		[Serializable] //won't be inherited
-		[AttributeUsage(AttributeTargets.Class)] //will be inherited
-		public class TestClass : Attribute //only an attribute so we can use attributeusgae for testing
-		{
-
-		}
-
-		public class TestClassInherited : TestClass
-		{
-
-		}
-
-		[AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
-		public class MultipleUseTestAttribute : Attribute
-		{
-
-		}
-
-		[MultipleUseTestAttribute]
-		[MultipleUseTestAttribute]
-		public class MultipleAttributeTestClass
-		{
-
-		}
 
 		//Tests for GetCustomAttributes returning IEnumerabe<Attribute>
 		#region  GetCustomAttributes

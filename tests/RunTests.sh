@@ -1,1 +1,1 @@
-nunit-console ./Net35Essentials.Tests/bin/Debug/Net35Essentials.Tests.dll
+nunit-console /framework=Mono-3.5 ./Net35Essentials.Tests/bin/Debug/Net35Essentials.Tests.dll
