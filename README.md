@@ -17,6 +17,11 @@
 To use this project you'll first need a couple of things:
   - Visual Studio 2015
 
+## Builds
+
+Available on a Nuget Feed: https://www.myget.org/F/hellokitty/api/v2 [![hellokitty MyGet Build Status](https://www.myget.org/BuildSource/Badge/hellokitty?identifier=bf51e9dc-af67-42cb-ad73-88ee3ca95072)](https://www.myget.org/)
+
+
 ##Tests
 
 #### Linux/Mono - Unit Tests
