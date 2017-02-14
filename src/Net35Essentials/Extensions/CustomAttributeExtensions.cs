@@ -15,7 +15,7 @@ namespace System
 		where TAttributeType : Attribute
 		{
 			if (mi == null)
-				throw new ArgumentNullException("mi", "MemberInfo: mi as parameter in extension method must not be null.");
+				throw new ArgumentNullException(nameof(mi), "MemberInfo: mi as parameter in extension method must not be null.");
 
 			return mi.GetCustomAttributes(typeof(TAttributeType), inherit) as IEnumerable<TAttributeType>;
 		}
@@ -24,12 +24,13 @@ namespace System
 			where TAttributeType : Attribute
 		{
 			if (mi == null)
-				throw new ArgumentNullException("mi", "MemberInfo: mi as parameter in extension method must not be null.");
+				throw new ArgumentNullException(nameof(mi), "MemberInfo: mi as parameter in extension method must not be null.");
 
-			var attriList = mi.GetCustomAttributes(typeof(TAttributeType), inherit) as IEnumerable<TAttributeType>;
+			TAttributeType[] attriList = (mi.GetCustomAttributes(typeof(TAttributeType), inherit) as IEnumerable<TAttributeType>).ToArray();
 
+			//TODO: Do we really want to throw?
 			if (attriList.Count() > 1)
-				throw new AmbiguousMatchException("More than one attribute of Type: " + typeof(TAttributeType).ToString() + " found on MemberInfo: " + mi.ToString() + ".");
+				throw new AmbiguousMatchException($"More than one attribute of Type: {typeof(TAttributeType)} found on MemberInfo: {mi.ToString()}.");
 
 			return attriList.FirstOrDefault();
 		}

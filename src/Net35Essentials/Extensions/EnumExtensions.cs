@@ -21,14 +21,12 @@ public static class EnumExtensions
 			return false;
 
 		if (value == null)
-			throw new ArgumentNullException("value");
+			throw new ArgumentNullException(nameof(value));
 
 		// Not as good as the .NET 4 version of this function, but should be good enough
 		if (!Enum.IsDefined(variable.GetType(), value))
 		{
-			throw new ArgumentException(string.Format(
-				"Enumeration type mismatch.  The flag is of type '{0}', was expecting '{1}'.",
-				value.GetType(), variable.GetType()));
+			throw new ArgumentException($"Enumeration type mismatch.  The flag is of type '{value.GetType()}', was expecting '{variable.GetType()}'.");
 		}
 
 		ulong num = Convert.ToUInt64(value);

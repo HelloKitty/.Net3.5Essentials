@@ -76,7 +76,7 @@ namespace System
 		public Lazy(Func<T> createValue, bool isThreadSafe)
 		{
 			if (createValue == null) 
-				throw new ArgumentNullException("createValue");
+				throw new ArgumentNullException(nameof(createValue));
 
 			threadSafe = isThreadSafe;
 			this.createValue = createValue;
